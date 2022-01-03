@@ -26,7 +26,7 @@ public class EchoBot extends ActivityHandler {
         String teamsChannelId = turnContext.getActivity().teamsGetChannelId();
         System.out.print(teamsChannelId); 
         return turnContext.sendActivity(
-            MessageFactory.text(teamsChannelId.isEmpty() + "")
+            teamsChannelId.isEmpty() + ""
         ).thenApply(sendResult -> null);
     }
 
